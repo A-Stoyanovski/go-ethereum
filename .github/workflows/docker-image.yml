@@ -18,7 +18,7 @@ jobs:
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Build & push Docker image
       with:
-        image: ghcr.io/${{ secrets.USERNAME }}/test
+        image: ${{ secrets.USERNAME }}/test
         tags: latest
         registry: ghcr.io
         dockerfile: Dockerfile
