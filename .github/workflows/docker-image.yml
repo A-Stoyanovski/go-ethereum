@@ -16,11 +16,8 @@ jobs:
       uses: actions/checkout@v3
   
     - uses: mr-smithers-excellent/docker-build-push@v6
-      name: Build & push Docker image
       with:
-        image: ${{ secrets.USERNAME }}/test
-        tags: latest
+        image: test
         registry: ghcr.io
-        dockerfile: Dockerfile
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.ACCESS_TOKEN }}
